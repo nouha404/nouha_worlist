@@ -5,6 +5,8 @@
 
 ## Guide :
 #### python nouha_wl.py
+## You need also to download typer
+#### pip install typer
 
 ### Now follow the instructions 
 
