@@ -28,35 +28,20 @@ word_array = []
 
 def get_number_informations(number = number_info):
     with open(file_name, 'a') as f:
-         
-        if number == 1:
-            for i in range(1,3):
-                word = typer.prompt(f"Enter info n°{i} ")
-                word_array.append(word)
-                
-        elif number == 2:
-            for i in range(1,4):
-                word = typer.prompt(f"Enter info n°{i} ")
-                word_array.append(word)
-                
-        elif number == 3:
-            for i in range(1,5):
-                word = typer.prompt(f"Enter info n°{i} ")
-                word_array.append(word)
-        
-        elif number == 4:
-            for i in range(1,6):
-                word = typer.prompt(f"Enter info n°{i} ")
-                word_array.append(word)
-                
+
+        for i in range (1, 5):
+            if number == i:
+                for i in range(1,i+2):
+                    word = typer.prompt(f"Enter info n°{i} ")
+                    word_array.append(word)
+
         json.dump(word_array, f, indent=4)
 
 get_number_informations()
 
 # fichier .json -> .txt
 def Json_file_to_txt(word_array = word_array):
-    arr1 = arr2 = arr3 = arr4 = arr5= []
- 
+    arr1 = arr2 = arr3 = arr4 = arr5 = []
 
     for i in range(len(word_array)):
         arr1.append(f'{word_array}{i}')
